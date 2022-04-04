@@ -36,7 +36,7 @@ def ListModule(module,g):
         print("The  codereferences of the instruction:",file=g)
         print('\n',file=g)
 
-        #The CodeReference of the Instruction
+        # The CodeReference of the Instruction
         for codereference in instruction.xrefs:
           if codereference.operand_type == CFG_pb2.CodeReference.OperandType.ImmediateOperand:
             print("codereference operand_type ImmediateOperand",file=g)
@@ -72,7 +72,7 @@ def ListModule(module,g):
       elif exceptionframe.action == CFG_pb2.ExceptionFrame.Action.Catch:
         print("exceptionframe action Catch",file=g)
 
-      #The ExternalVariable of the ExceptionFrame
+      # The ExternalVariable of the ExceptionFrame
       print("The externalvariables in the ExceptionFrame:",file=g)
       print('\n',file=g)
       for externalvariable in function.ttype:
@@ -150,7 +150,7 @@ def ListModule(module,g):
 
 
 
-     #The ExternalVariable  in the Module
+     # The ExternalVariable  in the Module
   print("The ExternalVariable  in the Module:",file=g)
   print('\n',file=g)
   for externalvariable in module.external_vars:
