@@ -10,7 +10,7 @@ def ListModule(module,g):
   print("module name:",module.name,file=g)
   print('\n',file=g)
 
-  #Function
+  # Function
   print("The Functions in the Module:",file=g)
   print('\n',file=g)
   for function in module.funcs:
@@ -21,7 +21,7 @@ def ListModule(module,g):
     print("The blocks in the function:",file=g)
     print('\n',file=g)
 
-    #The blocks in the Function
+    # The blocks in the Function
     for block in function.blocks:
       print("---------------------------------------------------------",file=g)
       print("block ea",block.ea,file=g)
@@ -29,7 +29,7 @@ def ListModule(module,g):
       print("The instructions in the block:",file=g)
       print('\n',file=g)
 
-      #The Instruction in the Block
+      # The Instruction in the Block
       for instruction in block.instructions:
         print("instruction ea",instruction.ea,file=g)
         print("instruction lp_ea",instruction.lp_ea,file=g)
@@ -53,13 +53,13 @@ def ListModule(module,g):
           print("codereference mask",codereference.mask,file=g)
         print('\n',file=g)
 
-      #The successor in the block 
+      # The successor in the block 
       for successor in block.successor_eas:
         print("successor ea",successor,file=g)
       print("---------------------------------------------------------",file=g)
       print('\n',file=g)
 
-    #The ExceptionFrame of the Function
+    # The ExceptionFrame of the Function
     print("The exceptionframes in the Function:",file=g)
     print('\n',file=g)
     for exceptionframe in function.eh_frame:
@@ -90,7 +90,7 @@ def ListModule(module,g):
   print('\n',file=g)
 
 
-  #Segments in the Module
+  # Segments in the Module
   for segment in module.segments:
     print("###########################################################",file=g) 
     print("segment ea :", segment.ea,file=g)
@@ -102,7 +102,7 @@ def ListModule(module,g):
     print("segment is_exported :", segment.is_exported,file=g)
     print("segment is_thread_local :", segment.is_thread_local,file=g)
 
-    #Datareferences of the Segment
+    # Datareferences of the Segment
     print("The datareferences in the Segment:",file=g)
     print('\n',file=g)
     for datareference in segment.xrefs:
@@ -115,7 +115,7 @@ def ListModule(module,g):
        print("datareference target_fixup_kind  OffsetFromThreadBase",file=g)
       print('\n',file=g)
 
-     #Variables in the Segment 
+     # Variables in the Segment 
     print("The variables in the Segment:",file=g)
     print('\n',file=g)
     for variable in segment.vars:
@@ -126,7 +126,7 @@ def ListModule(module,g):
     print('\n',file=g)
 
 
-    #The ExternalFunctions in the Module
+    # The ExternalFunctions in the Module
   print("The ExternalFunctions in the Module:",file=g)
   print('\n',file=g)
   for externalfunction in module.external_funcs:
@@ -165,7 +165,7 @@ def ListModule(module,g):
 
 
 
-     #The GlobalVariable   in the Module 
+     # The GlobalVariable   in the Module 
   print("The GlobalVariable   in the Module:",file=g)
   print('\n',file=g)
   for globalvariable  in module.global_vars:
@@ -178,7 +178,7 @@ def ListModule(module,g):
 
 
 
-     #The PreservedRegister   in the Module
+     # The PreservedRegister   in the Module
   print("The PreservedRegister   in the Module:",file=g)
   print('\n',file=g)
   for preservedregister  in module.preserved_regs:
@@ -195,7 +195,7 @@ def ListModule(module,g):
 
 
 
-    #The DeadRegisters   in the Module 
+    # The DeadRegisters   in the Module 
   print("The DeadRegisters   in the Module:",file=g)
   print('\n',file=g)
   for deadregister  in module.dead_regs:
