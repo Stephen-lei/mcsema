@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-#to use this ,you have to put the CFG_pb2.py file,which from the  mcsema/tools/mcsema_disass/ida7/ ,into the same dir with this script
+# to use this ,you have to put the CFG_pb2.py file,which from the  mcsema/tools/mcsema_disass/ida7/ ,into the same dir with this script
 # type  python show_cfg.py "xxx.cfg" "xxx.txt" 
 # the first arg is location of the cfg file you want to see,like "./maze.cfg"
 # the second arg is the location of the generated cfg details if the cfg file,like "./cfgdetails.txt"
